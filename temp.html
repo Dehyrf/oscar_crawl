@@ -43,7 +43,8 @@ ORIGINAL_SCREENPLAY = [Bridge of Spies, Ex Machina, Inside Out, Spotlight, Strai
 BEST_CINEMATOGRAPHY = [Carol, The Hateful Eight, Mad Max Fury Road, The Revenant, Sicario]"""
 
 for i, c in enumerate(vals):
-    if c == '[' or (c == ' ' and vals[i-i] == ',')
+    if c == '[' or (c == ' ' and vals[i-i] == ','):
         vals = vals[i:] + """'""" + vals[:i]
-    elif c in [']', ','] 
+    elif c in [']', ',']:
         vals = vals[i-1:] + """'""" + vals[:i-1]
+print vals
