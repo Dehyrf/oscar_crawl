@@ -8,7 +8,7 @@ BEST_SUPPORTING_ACTOR = [Christian Bale The Big Short, Tom Hardy The Revenant, M
 
 BEST_SUPPORTING_ACTRESS = [Jennifer Jason Leigh The Hateful Eight, Rooney Mara Carol, Rachel McAdams Spotlight, Alicia Vikander The Danish Girl, Kate Winslet Steve Jobs]
 
-DIRECTING = [Adam McKay The Big Short, George Miller Mad Max Fury Road, Alejandro G. Iñárritu The Revenant, Lenny Abrahamson Room, Tom McCarthy Spotlight]
+DIRECTING = [Adam McKay The Big Short, George Miller Mad Max Fury Road, Alejandro G. Inarritu The Revenant, Lenny Abrahamson Room, Tom McCarthy Spotlight]
 
 ANIMATED_FEATURE_FILM = [Anomalisa, Boy and the World, Inside Out, Shaun the Sheep Movie, When Marnie Was There]
 
@@ -43,7 +43,7 @@ ORIGINAL_SCREENPLAY = [Bridge of Spies, Ex Machina, Inside Out, Spotlight, Strai
 BEST_CINEMATOGRAPHY = [Carol, The Hateful Eight, Mad Max Fury Road, The Revenant, Sicario]"""
 
 for i, c in enumerate(vals):
-    if c == '[' or (c == ' ' and vals[i-i] == ','):
+    if c == '[' or (c == ' ' and vals[i-1] == ','):
         vals = vals[i:] + """'""" + vals[:i]
     elif c in [']', ',']:
         vals = vals[i-1:] + """'""" + vals[:i-1]
